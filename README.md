@@ -27,6 +27,8 @@ Configures the official Docker apt repository
 
 Simply add `recipe[chef-apt-docker]` to a run list. Change the component if you want testing / experimental releases
 
+Note: Debian 7 requires the wheezy-backports repository be setup to fully satisfy requirements of the docker packages. This cookbook does not handle that, but you will need to setup that repository if running Debian 7.
+
 ## License & Authors
 
 **Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))

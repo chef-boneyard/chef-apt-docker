@@ -13,7 +13,7 @@ Configures the official Docker apt repository
 
 ### Chef
 
-- Chef 12+
+- Chef 12.1+
 
 ### Cookbooks
 

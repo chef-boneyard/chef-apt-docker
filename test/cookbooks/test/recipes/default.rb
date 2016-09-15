@@ -1,4 +1,3 @@
-include_recipe 'apt'
 include_recipe 'chef-apt-docker'
 
 # docker needs init-system-helpers, which is in backports on wheezy

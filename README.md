@@ -17,7 +17,7 @@ Configures the official Docker apt repository
 
 ### Cookbooks
 
-- apt
+- compat_resource
 
 ## Attributes
 

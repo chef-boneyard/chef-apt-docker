@@ -18,9 +18,9 @@
 #
 
 apt_repository 'docker' do
-  uri 'https://apt.dockerproject.org/repo'
+  uri node['chef-apt-docker']['uri']
   distribution "#{node['platform']}-#{node['lsb']['codename']}"
-  keyserver 'p80.pool.sks-keyservers.net'
+  keyserver node['chef-apt-docker']['keyserver']
   components node['chef-apt-docker']['components']
-  key '58118E89F3A912897C070ADBF76221572C52609D'
+  key node['chef-apt-docker']['key']
 end

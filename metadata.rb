@@ -12,8 +12,6 @@ recipe 'chef-apt-docker::default', 'Sets up the Docker apt repository.'
   supports os
 end
 
-depends 'compat_resource', '>= 12.16.3'
-
 source_url 'https://github.com/chef-cookbooks/chef-apt-docker'
 issues_url 'https://github.com/chef-cookbooks/chef-apt-docker/issues'
 chef_version '>= 12.1' if respond_to?(:chef_version)

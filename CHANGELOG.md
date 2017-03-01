@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of the chef-apt-docker cookbook.
 
+## 1.1.1 (2017-03-01)
+- removing dep on compat_resource
+
 ## 1.1.0 (2017-02-15)
 
 - Make sure debian knows it's codename

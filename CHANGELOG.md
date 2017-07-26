@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of the chef-apt-docker cookbook.
 
+## 1.1.2 (2017-07-25)
+- Pull Docker GPG key from pgp.mit.edu
+
 ## 1.1.1 (2017-03-01)
 - removing dep on compat_resource
 

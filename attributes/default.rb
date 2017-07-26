@@ -19,5 +19,5 @@
 
 default['chef-apt-docker']['components'] = %w(main)
 default['chef-apt-docker']['uri'] = 'https://apt.dockerproject.org/repo'
-default['chef-apt-docker']['keyserver'] = 'p80.pool.sks-keyservers.net'
+default['chef-apt-docker']['keyserver'] = 'pgp.mit.edu'
 default['chef-apt-docker']['key'] = '58118E89F3A912897C070ADBF76221572C52609D'

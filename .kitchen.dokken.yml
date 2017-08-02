@@ -1,7 +1,7 @@
 driver:
   name: dokken
   privileged: true # because Docker and SystemD/Upstart
-  chef_version: <%= ENV['CHEF_VERSION'] || 'current' %>
+  chef_version: current
 
 transport:
   name: dokken
@@ -16,36 +16,32 @@ verifier:
 platforms:
 - name: debian-7
   driver:
-    image: debian:7
+    image: dokken/debian-7
     pid_one_command: /sbin/init
     intermediate_instructions:
       - RUN /usr/bin/apt-get update
-      - RUN /usr/bin/apt-get install apt-transport-https lsb-release procps net-tools -y
+      - RUN /usr/bin/apt-get install -y init-system-helpers
 
 - name: debian-8
   driver:
-    image: debian:8
+    image: dokken/debian-8
     pid_one_command: /bin/systemd
-    intermediate_instructions:
-      - RUN /usr/bin/apt-get update
-      - RUN /usr/bin/apt-get install apt-transport-https lsb-release procps net-tools -y
-
+  
 - name: ubuntu-14.04
   driver:
-    image: ubuntu-upstart:14.04
+    image: dokken/ubuntu-14.04
     pid_one_command: /sbin/init
-    intermediate_instructions:
-      - RUN /usr/bin/apt-get update
-      - RUN /usr/bin/apt-get install apt-transport-https lsb-release procps net-tools -y
 
 - name: ubuntu-16.04
   driver:
-    image: ubuntu:16.04
+    image: dokken/ubuntu-16.04
     pid_one_command: /bin/systemd
-    intermediate_instructions:
-      - RUN /usr/bin/apt-get update
-      - RUN /usr/bin/apt-get install apt-transport-https lsb-release procps net-tools -y
 
+- name: ubuntu-17.04
+  driver:
+    image: dokken/ubuntu-17.04
+    pid_one_command: /bin/systemd
+  
 suites:
   - name: default
     run_list: test::default

@@ -1,10 +1,21 @@
 require 'spec_helper'
 
-describe 'default recipe on ubuntu 16.04' do
-  let(:runner) { ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '16.04') }
-  let(:chef_run) { runner.converge('chef-apt-docker::default') }
+describe 'chef-apt-docker::default' do
+  context 'default attributes' do
+    let(:chef_run) do
+      ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '16.04').converge(described_recipe)
+    end
 
-  it 'converges successfully' do
-    expect { :chef_run }.to_not raise_error
+    it 'creates the apt repo docker-stable' do
+      expect(chef_run).to add_apt_repository('docker-stable')
+    end
+
+    it 'removes the apt repo docker-edge' do
+      expect(chef_run).to remove_apt_repository('docker-edge')
+    end
+
+    it 'removes the apt repo docker-test' do
+      expect(chef_run).to remove_apt_repository('docker-test')
+    end
   end
 end

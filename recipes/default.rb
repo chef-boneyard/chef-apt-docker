@@ -17,10 +17,15 @@
 # limitations under the License.
 #
 
-apt_repository 'docker' do
-  uri node['chef-apt-docker']['uri']
-  distribution "#{node['platform']}-#{node['lsb']['codename']}"
-  keyserver node['chef-apt-docker']['keyserver']
-  components node['chef-apt-docker']['components']
-  key node['chef-apt-docker']['key']
+%w(
+  docker-stable
+  docker-edge
+  docker-test
+).each do |repo|
+  apt_repository repo do
+    node['chef-apt-docker'][repo].each do |config, value|
+      send(config.to_sym, value) unless value.nil? || config == 'enabled'
+    end
+    action node['chef-apt-docker'][repo]['enabled'] ? :add : :remove
+  end
 end

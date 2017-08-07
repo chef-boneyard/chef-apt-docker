@@ -22,6 +22,7 @@ Configures the official Docker apt repository
 ## Attributes
 
 - `node['chef-apt-docker']['components']` - repository components to configure. Default to ['main']. Other options are experimental and testing. Component must be an array of strings even if only a single component.
+- `node['chef-apt-docker']['repos']` - array of repos to add, useful for older docker versions
 
 ## Usage
 

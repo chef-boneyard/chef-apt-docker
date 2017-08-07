@@ -17,11 +17,7 @@
 # limitations under the License.
 #
 
-%w(
-  docker-stable
-  docker-edge
-  docker-test
-).each do |repo|
+node['chef-apt-docker']['repos'].each do |repo|
   apt_repository repo do
     node['chef-apt-docker'][repo].each do |config, value|
       send(config.to_sym, value) unless value.nil? || config == 'enabled'

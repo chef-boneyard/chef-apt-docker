@@ -37,3 +37,9 @@ default['chef-apt-docker']['docker-test']['distribution'] = node['lsb']['codenam
 default['chef-apt-docker']['docker-test']['keyserver'] = 'pgp.mit.edu'
 default['chef-apt-docker']['docker-test']['key'] = '9DC858229FC7DD38854AE2D88D81803C0EBFCD88'
 default['chef-apt-docker']['docker-test']['enabled'] = false
+
+default['chef-apt-docker']['repos'] = %w(
+  docker-stable
+  docker-edge
+  docker-test
+)

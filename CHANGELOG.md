@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the chef-apt-docker cookbook.
 
+## 2.0.1 (2017-08-11)
+
+- Workaround missing packages in base debian 9
+
 ## 2.0.0 (2017-08-02)
 
 - updating to the latest docker repo structure as Docker has entirely changed their repo setup

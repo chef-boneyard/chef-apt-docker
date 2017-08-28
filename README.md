@@ -29,6 +29,8 @@ Simply add `recipe[chef-apt-docker]` to a run list. Change the component if you 
 
 Note: Debian 7 requires the wheezy-backports repository be setup to fully satisfy requirements of the docker packages. This cookbook does not handle that, but you will need to setup that repository if running Debian 7.
 
+Note: As of version 2.0 of this cookbook installs *docker-ce* instead of *docker-engine* as Docker renamed the free Docker products to Docker Community Edition (CE) in 2017. 
+
 ## License & Authors
 
 **Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))

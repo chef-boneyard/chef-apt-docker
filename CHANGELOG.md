@@ -2,7 +2,12 @@
 
 This file is used to list changes made in each version of the chef-apt-docker cookbook.
 
+## 2.0.3 (2017-09-18)
+
+- Use SKS keyserver pool rather than pgp.mit.edu as this is more reliable
+
 ## 2.0.2 (2017-08-31)
+
 - fix for trusty failing without an arch listed
 
 ## 2.0.1 (2017-08-11)

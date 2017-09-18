@@ -21,7 +21,7 @@ default['chef-apt-docker']['docker-stable']['components'] = %w(stable)
 default['chef-apt-docker']['docker-stable']['uri'] = "https://download.docker.com/linux/#{node['platform']}"
 default['chef-apt-docker']['docker-stable']['distribution'] = node['lsb']['codename']
 default['chef-apt-docker']['docker-stable']['arch'] = 'amd64'
-default['chef-apt-docker']['docker-stable']['keyserver'] = 'pgp.mit.edu'
+default['chef-apt-docker']['docker-stable']['keyserver'] = 'pool.sks-keyservers.net'
 default['chef-apt-docker']['docker-stable']['key'] = '9DC858229FC7DD38854AE2D88D81803C0EBFCD88'
 default['chef-apt-docker']['docker-stable']['enabled'] = true
 
@@ -29,7 +29,7 @@ default['chef-apt-docker']['docker-edge']['components'] = %w(edge)
 default['chef-apt-docker']['docker-edge']['uri'] = "https://download.docker.com/linux/#{node['platform']}"
 default['chef-apt-docker']['docker-edge']['distribution'] = node['lsb']['codename']
 default['chef-apt-docker']['docker-edge']['arch'] = 'amd64'
-default['chef-apt-docker']['docker-edge']['keyserver'] = 'pgp.mit.edu'
+default['chef-apt-docker']['docker-edge']['keyserver'] = 'pool.sks-keyservers.net'
 default['chef-apt-docker']['docker-edge']['key'] = '9DC858229FC7DD38854AE2D88D81803C0EBFCD88'
 default['chef-apt-docker']['docker-edge']['enabled'] = false
 
@@ -37,6 +37,6 @@ default['chef-apt-docker']['docker-test']['components'] = %w(test)
 default['chef-apt-docker']['docker-test']['uri'] = "https://download.docker.com/linux/#{node['platform']}"
 default['chef-apt-docker']['docker-test']['distribution'] = node['lsb']['codename']
 default['chef-apt-docker']['docker-test']['arch'] = 'amd64'
-default['chef-apt-docker']['docker-test']['keyserver'] = 'pgp.mit.edu'
+default['chef-apt-docker']['docker-test']['keyserver'] = 'pool.sks-keyservers.net'
 default['chef-apt-docker']['docker-test']['key'] = '9DC858229FC7DD38854AE2D88D81803C0EBFCD88'
 default['chef-apt-docker']['docker-test']['enabled'] = false

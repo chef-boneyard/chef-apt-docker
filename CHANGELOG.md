@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the chef-apt-docker cookbook.
 
+## 2.0.5 (2018-02-16)
+
+- Remove the mention of compat_resource
+
 ## 2.0.4 (2017-09-21)
 
 - Use the Ubuntu keyserver which is more reliable

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the chef-apt-docker cookbook.
 
+## 2.0.6 (2018-02-28)
+
+- Avoid potential NilClass error in attributes file if this recipe is on a windows node
+
 ## 2.0.5 (2018-02-16)
 
 - Remove the mention of compat_resource

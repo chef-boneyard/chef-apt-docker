@@ -17,7 +17,9 @@
 # limitations under the License.
 #
 
-package %w(dirmngr apt-transport-https) do
+package 'apt-transport-https'
+
+package 'dirmngr' do
   only_if { node['platform'] == 'debian' && node['platform_version'].to_i >= 9 }
 end
 

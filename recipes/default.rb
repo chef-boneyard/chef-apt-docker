@@ -18,7 +18,7 @@
 #
 
 package %w(dirmngr apt-transport-https) do
-  only_if { node['platform'] == 'debian' && node['platform_version'].to_i >= 9 }
+  only_if { node['platform'] == 'debian' || node['platform'] == 'ubuntu' && node['platform_version'].to_i >= 9 }
 end
 
 %w(

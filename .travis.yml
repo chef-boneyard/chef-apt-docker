@@ -21,6 +21,7 @@ env:
   - INSTANCE=default-debian-8
   - INSTANCE=default-debian-9
   - INSTANCE=default-ubuntu-1604
+  - INSTANCE=default-ubuntu-1804
 
 before_script:
   - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
@@ -32,7 +33,7 @@ script: KITCHEN_LOCAL_YAML=kitchen.dokken.yml kitchen verify ${INSTANCE}
 matrix:
   include:
     - script:
-      - chef exec delivery local all
+      - delivery local all
       env:
         - UNIT_AND_LINT=1
         - CHEF_LICENSE=accept

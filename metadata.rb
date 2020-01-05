@@ -11,4 +11,4 @@ end
 
 source_url 'https://github.com/chef-cookbooks/chef-apt-docker'
 issues_url 'https://github.com/chef-cookbooks/chef-apt-docker/issues'
-chef_version '>= 12.9'
+chef_version '>= 12.15'

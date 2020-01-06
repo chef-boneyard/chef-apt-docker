@@ -29,7 +29,7 @@ describe 'chef-apt-docker::default' do
 
   context 'Debian 8' do
     let(:chef_run) do
-      ChefSpec::ServerRunner.new(platform: 'debian', version: '8.8').converge(described_recipe)
+      ChefSpec::ServerRunner.new(platform: 'debian', version: '8').converge(described_recipe)
     end
 
     it 'does not install repo dependency packages' do
@@ -39,7 +39,7 @@ describe 'chef-apt-docker::default' do
 
   context 'Debian 9' do
     let(:chef_run) do
-      ChefSpec::ServerRunner.new(platform: 'debian', version: '9.0').converge(described_recipe)
+      ChefSpec::ServerRunner.new(platform: 'debian', version: '9').converge(described_recipe)
     end
 
     it 'installs dependency repo packages' do

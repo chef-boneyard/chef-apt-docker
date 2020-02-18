@@ -15,13 +15,6 @@ verifier:
   name: inspec
 
 platforms:
-- name: debian-8
-  driver:
-    image: dokken/debian-8
-    pid_one_command: /bin/systemd
-    intermediate_instructions:
-      - RUN /usr/bin/apt-get update
-
 - name: debian-9
   driver:
     image: dokken/debian-9
@@ -43,3 +36,9 @@ platforms:
     intermediate_instructions:
       - RUN /usr/bin/apt-get update
 
+- name: ubuntu-18.04
+  driver:
+    image: dokken/ubuntu-18.04
+    pid_one_command: /bin/systemd
+    intermediate_instructions:
+      - RUN /usr/bin/apt-get update
